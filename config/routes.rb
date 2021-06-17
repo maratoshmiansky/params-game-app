@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "query_params" => "params#query_params"
   get "/name" => "params#name"
   get "/guess" => "params#guess"
+  get "/segment_params/:this_is_a_key" => "params#segment_params"
 end
