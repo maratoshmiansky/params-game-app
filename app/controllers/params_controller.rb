@@ -23,6 +23,7 @@ class ParamsController < ApplicationController
     else
       output_message = "You win!!!"
     end
+    render json: { message: output_message }
   end
 
   def segment_params
