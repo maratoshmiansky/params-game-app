@@ -30,4 +30,14 @@ class ParamsController < ApplicationController
     input_value = params["this_is_a_key"]
     render json: { message: "The url segment is #{input_value}" }
   end
+
+  def body_params
+    input_user_name = params["user_name"]
+    input_user_password = params["user_password"]
+    if input_user_name == "hugh" && input_user_password == "swordfish"
+      render json: { message: "Valid credentials." }
+    else
+      render json: { message: "Invalid credentials." }
+    end
+  end
 end
